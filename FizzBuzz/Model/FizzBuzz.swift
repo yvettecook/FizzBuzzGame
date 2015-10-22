@@ -11,23 +11,19 @@ import Foundation
 class FizzBuzz : NSObject {
     
     func isDivisibleByThree(number: Int) -> Bool {
-        if number % 3 == 0 {
-            return true
-        } else {
-            return false
-        }
+        return isDivisibleBy(number, divisor: 3)
     }
     
     func isDivisibleByFive(number: Int) -> Bool {
-        if number % 5 == 0 {
-            return true
-        } else {
-            return false
-        }
+        return isDivisibleBy(number, divisor: 5)
     }
     
     func isDivisibleByFifteen(number: Int) -> Bool {
-        if number % 15 == 0 {
+        return isDivisibleBy(number, divisor: 15)
+    }
+    
+    func isDivisibleBy(number: Int, divisor: Int) -> Bool {
+        if number % divisor == 0 {
             return true
         } else {
             return false
