@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AA16C881BD9494600A051E5 /* FizzBuzzVoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA16C871BD9494600A051E5 /* FizzBuzzVoiceTests.swift */; settings = {ASSET_TAGS = (); }; };
+		1AA16C8E1BD94ECB00A051E5 /* FizzBuzzVoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA16C8D1BD94ECB00A051E5 /* FizzBuzzVoice.swift */; settings = {ASSET_TAGS = (); }; };
 		1AC19F231BD936FD003EFBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F221BD936FD003EFBCB /* AppDelegate.swift */; };
 		1AC19F251BD936FD003EFBCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F241BD936FD003EFBCB /* ViewController.swift */; };
 		1AC19F281BD936FD003EFBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC19F261BD936FD003EFBCB /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1AA16C871BD9494600A051E5 /* FizzBuzzVoiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzBuzzVoiceTests.swift; sourceTree = "<group>"; };
+		1AA16C8D1BD94ECB00A051E5 /* FizzBuzzVoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FizzBuzzVoice.swift; path = Model/FizzBuzzVoice.swift; sourceTree = "<group>"; };
 		1AC19F1F1BD936FD003EFBCB /* FizzBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC19F221BD936FD003EFBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AC19F241BD936FD003EFBCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				1AC19F511BD9389F003EFBCB /* FizzBuzzBrain.swift */,
+				1AA16C8D1BD94ECB00A051E5 /* FizzBuzzVoice.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				1AC19F251BD936FD003EFBCB /* ViewController.swift in Sources */,
 				1AC19F231BD936FD003EFBCB /* AppDelegate.swift in Sources */,
+				1AA16C8E1BD94ECB00A051E5 /* FizzBuzzVoice.swift in Sources */,
 				1AC19F521BD9389F003EFBCB /* FizzBuzzBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

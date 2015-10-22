@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import FizzBuzz
 
 class FizzBuzzVoiceTests: XCTestCase {
     
@@ -18,8 +19,13 @@ class FizzBuzzVoiceTests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        fizzbuzzVoice = nil
         super.tearDown()
+    }
+    
+    func testSaysFizzForThree() {
+        let result = fizzbuzzVoice.check(3)
+        XCTAssertEqual(result, "fizz")
     }
     
 }
