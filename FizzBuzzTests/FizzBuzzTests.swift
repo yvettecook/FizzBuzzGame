@@ -18,14 +18,19 @@ class FizzBuzzTests: XCTestCase {
         fizzbuzz = FizzBuzz()
     }
     
+    func testIsDivisibleByThree() {
+        let result = fizzbuzz.isDivisibleByThree(3)
+        XCTAssertEqual(result, true)
+    }
+    
+    func testIsNotDivisibleByThree() {
+        let result = fizzbuzz.isDivisibleByThree(1)
+        XCTAssertEqual(result, false)
+    }
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-    }
-    
-    func testIsDivisibleByThree() {
-        let result = self.fizzbuzz.isDivisibleByThree(3)
-        XCTAssertEqual(result, true)
     }
     
 }
