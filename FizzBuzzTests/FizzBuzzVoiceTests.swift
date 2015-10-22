@@ -23,9 +23,29 @@ class FizzBuzzVoiceTests: XCTestCase {
         super.tearDown()
     }
     
+    func testVoiceHasABrain() {
+        let result = fizzbuzzVoice.brain
+        XCTAssertNotNil(result)
+    }
+    
     func testSaysFizzForThree() {
         let result = fizzbuzzVoice.check(3)
         XCTAssertEqual(result, "fizz")
+    }
+    
+    func testSaysBuzzForFive() {
+        let result = fizzbuzzVoice.check(5)
+        XCTAssertEqual(result, "buzz")
+    }
+    
+    func testSaysFizzBuzzForFifteen() {
+        let result = fizzbuzzVoice.check(15)
+        XCTAssertEqual(result, "fizzbuzz")
+    }
+    
+    func testSaysNumberForOne() {
+        let result = fizzbuzzVoice.check(1)
+        XCTAssertEqual(result, "1")
     }
     
 }

@@ -10,8 +10,13 @@ import Foundation
 
 class FizzBuzzVoice {
     
+    let brain = FizzBuzzBrain()
+    
     func check(number: Int) -> String {
-        return "fizz"
+        if brain.isDivisibleByFifteen(number) { return "fizzbuzz"  }
+        if brain.isDivisibleByThree(number)   { return "fizz"      }
+        if brain.isDivisibleByFive(number)    { return "buzz"      }
+        else                                  { return "\(number)" }
     }
     
 }
