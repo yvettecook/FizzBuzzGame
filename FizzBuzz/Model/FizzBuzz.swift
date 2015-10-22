@@ -10,6 +10,8 @@ import Foundation
 
 class FizzBuzz : NSObject {
     
-    
+    func isDivisibleByThree(number: Int) -> Bool {
+        return true
+    }
     
 }

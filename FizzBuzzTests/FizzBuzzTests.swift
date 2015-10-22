@@ -24,7 +24,8 @@ class FizzBuzzTests: XCTestCase {
     }
     
     func testIsDivisibleByThree() {
-        XCTAssertEqual(self.fizzbuzz.isDivisibleByThreee(3), true)
+        let result = self.fizzbuzz.isDivisibleByThree(3)
+        XCTAssertEqual(result, true)
     }
     
 }
