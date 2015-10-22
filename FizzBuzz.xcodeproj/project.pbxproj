@@ -14,6 +14,7 @@
 		1AC19F2D1BD936FD003EFBCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC19F2B1BD936FD003EFBCB /* LaunchScreen.storyboard */; };
 		1AC19F381BD936FE003EFBCB /* FizzBuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F371BD936FE003EFBCB /* FizzBuzzTests.swift */; };
 		1AC19F431BD936FE003EFBCB /* FizzBuzzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F421BD936FE003EFBCB /* FizzBuzzUITests.swift */; };
+		1AC19F521BD9389F003EFBCB /* FizzBuzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F511BD9389F003EFBCB /* FizzBuzz.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1AC19F3E1BD936FE003EFBCB /* FizzBuzzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FizzBuzzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC19F421BD936FE003EFBCB /* FizzBuzzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzUITests.swift; sourceTree = "<group>"; };
 		1AC19F441BD936FE003EFBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AC19F511BD9389F003EFBCB /* FizzBuzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FizzBuzz.swift; path = Model/FizzBuzz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		1AC19F211BD936FD003EFBCB /* FizzBuzz */ = {
 			isa = PBXGroup;
 			children = (
+				1AC19F501BD93887003EFBCB /* Model */,
 				1AC19F221BD936FD003EFBCB /* AppDelegate.swift */,
 				1AC19F241BD936FD003EFBCB /* ViewController.swift */,
 				1AC19F261BD936FD003EFBCB /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				1AC19F441BD936FE003EFBCB /* Info.plist */,
 			);
 			path = FizzBuzzUITests;
+			sourceTree = "<group>";
+		};
+		1AC19F501BD93887003EFBCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AC19F511BD9389F003EFBCB /* FizzBuzz.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			files = (
 				1AC19F251BD936FD003EFBCB /* ViewController.swift in Sources */,
 				1AC19F231BD936FD003EFBCB /* AppDelegate.swift in Sources */,
+				1AC19F521BD9389F003EFBCB /* FizzBuzz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
