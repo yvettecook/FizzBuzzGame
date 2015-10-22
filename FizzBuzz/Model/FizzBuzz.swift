@@ -17,5 +17,5 @@ class FizzBuzz : NSObject {
             return false
         }
     }
-    
+        
 }

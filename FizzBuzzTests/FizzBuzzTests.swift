@@ -28,6 +28,11 @@ class FizzBuzzTests: XCTestCase {
         XCTAssertEqual(result, false)
     }
     
+    func testIsDivisibleByFive() {
+        let result = fizzbuzz.isDivisibleByFive(5)
+        XCTAssertEqual(result, true)
+    }
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
