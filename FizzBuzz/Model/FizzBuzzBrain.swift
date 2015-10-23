@@ -24,4 +24,11 @@ class FizzBuzzBrain {
         return number % divisor == 0
     }
     
+    func check(number: Int) -> Moves {
+        if isDivisibleByFifteen(number) { return .FizzBuzz  }
+        if isDivisibleByThree(number)   { return .Fizz      }
+        if isDivisibleByFive(number)    { return .Buzz      }
+        else                            { return .Number    }
+    }
+    
 }

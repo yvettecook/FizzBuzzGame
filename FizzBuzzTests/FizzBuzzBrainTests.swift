@@ -48,6 +48,26 @@ class FizzBuzzTests: XCTestCase {
         XCTAssertEqual(result, false)
     }
     
+    func testSaysFizzForThree() {
+        let result = fizzbuzz.check(3)
+        XCTAssertEqual(result, Moves.Fizz)
+    }
+    
+    func testSaysBuzzForFive() {
+        let result = fizzbuzz.check(5)
+        XCTAssertEqual(result, Moves.Buzz)
+    }
+    
+    func testSaysFizzBuzzForFifteen() {
+        let result = fizzbuzz.check(15)
+        XCTAssertEqual(result, Moves.FizzBuzz)
+    }
+    
+    func testSaysNumberForOne() {
+        let result = fizzbuzz.check(1)
+        XCTAssertEqual(result, Moves.Number)
+    }
+    
     override func tearDown() {
         fizzbuzz = nil
         super.tearDown()
