@@ -1,0 +1,39 @@
+//
+//  ViewControllerTests.swift
+//  FizzBuzz
+//
+//  Created by Yvette Cook on 25/10/2015.
+//  Copyright © 2015 YvetteCook. All rights reserved.
+//
+
+import XCTest
+@testable import FizzBuzz
+
+class ViewControllerTests: XCTestCase {
+    
+    var viewController : ViewController!
+
+    override func setUp() {
+        super.setUp()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        viewController = storyboard.instantiateViewControllerWithIdentifier("FizzBuzzViewController") as! ViewController
+        UIApplication.sharedApplication().keyWindow!.rootViewController = viewController
+        
+//        let _ = viewController
+
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+    }
+    
+    func testShouldHaveScoreDisplayButton() {
+        let button = viewController.scoreButton
+        XCTAssertNotNil(viewController)
+        XCTAssertNotNil(button)
+    }
+
+   
+
+}

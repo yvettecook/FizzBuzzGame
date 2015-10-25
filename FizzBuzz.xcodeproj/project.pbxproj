@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1AA4697A1BD970B700341007 /* FizzBuzzGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA469791BD970B700341007 /* FizzBuzzGameTests.swift */; };
 		1AA4697C1BD9764400341007 /* FizzBuzzGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA4697B1BD9764400341007 /* FizzBuzzGame.swift */; };
+		1AAE2B811BDCC92600104761 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE2B801BDCC92600104761 /* ViewControllerTests.swift */; };
 		1AC19F231BD936FD003EFBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F221BD936FD003EFBCB /* AppDelegate.swift */; };
 		1AC19F251BD936FD003EFBCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F241BD936FD003EFBCB /* ViewController.swift */; };
 		1AC19F281BD936FD003EFBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC19F261BD936FD003EFBCB /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		1AA469791BD970B700341007 /* FizzBuzzGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzBuzzGameTests.swift; sourceTree = "<group>"; };
 		1AA4697B1BD9764400341007 /* FizzBuzzGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FizzBuzzGame.swift; path = Model/FizzBuzzGame.swift; sourceTree = "<group>"; };
+		1AAE2B801BDCC92600104761 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		1AC19F1F1BD936FD003EFBCB /* FizzBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC19F221BD936FD003EFBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AC19F241BD936FD003EFBCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AAE2B7D1BDAB3A200104761 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AC19F2B1BD936FD003EFBCB /* LaunchScreen.storyboard */,
+				1AC19F261BD936FD003EFBCB /* Main.storyboard */,
+				1AC19F291BD936FD003EFBCB /* Assets.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1AAE2B7E1BDAB80A00104761 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AC19F241BD936FD003EFBCB /* ViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		1AAE2B7F1BDAB84400104761 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Model";
+			sourceTree = "<group>";
+		};
 		1AC19F161BD936FD003EFBCB = {
 			isa = PBXGroup;
 			children = (
@@ -104,11 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				1AC19F501BD93887003EFBCB /* Model */,
+				1AAE2B7F1BDAB84400104761 /* View Model */,
+				1AAE2B7E1BDAB80A00104761 /* View Controller */,
+				1AAE2B7D1BDAB3A200104761 /* View */,
 				1AC19F221BD936FD003EFBCB /* AppDelegate.swift */,
-				1AC19F241BD936FD003EFBCB /* ViewController.swift */,
-				1AC19F261BD936FD003EFBCB /* Main.storyboard */,
-				1AC19F291BD936FD003EFBCB /* Assets.xcassets */,
-				1AC19F2B1BD936FD003EFBCB /* LaunchScreen.storyboard */,
 				1AC19F2E1BD936FD003EFBCB /* Info.plist */,
 			);
 			path = FizzBuzz;
@@ -119,6 +145,7 @@
 			children = (
 				1AC19F371BD936FE003EFBCB /* FizzBuzzBrainTests.swift */,
 				1AA469791BD970B700341007 /* FizzBuzzGameTests.swift */,
+				1AAE2B801BDCC92600104761 /* ViewControllerTests.swift */,
 				1AC19F391BD936FE003EFBCB /* Info.plist */,
 			);
 			path = FizzBuzzTests;
@@ -283,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AAE2B811BDCC92600104761 /* ViewControllerTests.swift in Sources */,
 				1AA4697A1BD970B700341007 /* FizzBuzzGameTests.swift in Sources */,
 				1AC19F381BD936FE003EFBCB /* FizzBuzzBrainTests.swift in Sources */,
 			);
