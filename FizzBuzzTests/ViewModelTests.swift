@@ -11,7 +11,7 @@ import XCTest
 
 class ViewModelTests: XCTestCase {
 
-    let vm = ViewModel()
+    let viewModel = ViewModel()
     
     override func setUp() {
         super.setUp()
@@ -22,7 +22,12 @@ class ViewModelTests: XCTestCase {
     }
 
     func testShouldHaveFizzBuzzGame() {
-        XCTAssertNotNil(vm.game)
+        XCTAssertNotNil(viewModel.game)
+    }
+    
+    func testCanCheckPlayerMove() {
+        let result = viewModel.checkMove(.Number)
+        XCTAssertTrue(result)
     }
 
 }

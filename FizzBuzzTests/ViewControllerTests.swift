@@ -46,8 +46,21 @@ class ViewControllerTests: XCTestCase {
         XCTAssertEqual(score, "1")
     }
     
+    
+    // MARK : Connection to View Model
+    
+    func testShouldHaveViewModel() {
+        XCTAssertNotNil(viewController.viewModel)
+    }
+    
     func testTapSendMessageToViewModel() {
-        // ??
+        viewController.tapped(viewController.scoreButton)
+        XCTAssertTrue(false)
+    }
+    
+    func testCanCheckIfMoveCorrect() {
+        let result = viewController.checkMove(.Number)
+        XCTAssertTrue(result)
     }
     
 

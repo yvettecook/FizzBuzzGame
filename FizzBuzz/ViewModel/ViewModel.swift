@@ -9,5 +9,9 @@
 class ViewModel {
     
     let game = FizzBuzzGame()
+    
+    func checkMove(move: Moves) -> Bool {
+        return true
+    }
         
 }

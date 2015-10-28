@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var fizzButton: UIButton!
     @IBOutlet weak var buzzButton: UIButton!
     
-    let vm = ViewModel()
+    let viewModel = ViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +29,15 @@ class ViewController: UIViewController {
     @IBAction func tapped(sender: UIButton) {
         switch sender {
         case scoreButton:
-            print(sender.titleLabel?.text)
-            
+            checkMove(.Number)
         default:
             break
         }
+    }
+    
+    func checkMove(move: Moves) -> Bool {
+        let checkedResult = viewModel.checkMove(move)
+        return checkedResult
     }
     
     // MARK: Output Actions
