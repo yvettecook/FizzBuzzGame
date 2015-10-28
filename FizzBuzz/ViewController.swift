@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var fizzButton: UIButton!
     @IBOutlet weak var buzzButton: UIButton!
     
+    let vm = ViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
         switch sender {
         case scoreButton:
             print(sender.titleLabel?.text)
+            
         default:
             break
         }

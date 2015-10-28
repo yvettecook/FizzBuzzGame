@@ -18,6 +18,8 @@
 		1AC19F381BD936FE003EFBCB /* FizzBuzzBrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F371BD936FE003EFBCB /* FizzBuzzBrainTests.swift */; };
 		1AC19F431BD936FE003EFBCB /* FizzBuzzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F421BD936FE003EFBCB /* FizzBuzzUITests.swift */; };
 		1AC19F521BD9389F003EFBCB /* FizzBuzzBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F511BD9389F003EFBCB /* FizzBuzzBrain.swift */; };
+		1AC8ACCE1BE129C7004B7090 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8ACCD1BE129C7004B7090 /* ViewModel.swift */; };
+		1AC8ACD11BE12D07004B7090 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8ACD01BE12D07004B7090 /* ViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		1AC19F421BD936FE003EFBCB /* FizzBuzzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzUITests.swift; sourceTree = "<group>"; };
 		1AC19F441BD936FE003EFBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AC19F511BD9389F003EFBCB /* FizzBuzzBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FizzBuzzBrain.swift; path = Model/FizzBuzzBrain.swift; sourceTree = "<group>"; };
+		1AC8ACCD1BE129C7004B7090 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = ViewModel/ViewModel.swift; sourceTree = "<group>"; };
+		1AC8ACD01BE12D07004B7090 /* ViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		1AAE2B7F1BDAB84400104761 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				1AC8ACCD1BE129C7004B7090 /* ViewModel.swift */,
 			);
 			name = "View Model";
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			children = (
 				1AC8ACCB1BE11AD6004B7090 /* Model Tests */,
 				1AC8ACCC1BE11AE2004B7090 /* ViewController Tests */,
+				1AC8ACCF1BE12CE2004B7090 /* ViewModel Tests */,
 				1AC19F391BD936FE003EFBCB /* Info.plist */,
 			);
 			path = FizzBuzzTests;
@@ -183,6 +189,14 @@
 				1AAE2B801BDCC92600104761 /* ViewControllerTests.swift */,
 			);
 			name = "ViewController Tests";
+			sourceTree = "<group>";
+		};
+		1AC8ACCF1BE12CE2004B7090 /* ViewModel Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1AC8ACD01BE12D07004B7090 /* ViewModelTests.swift */,
+			);
+			name = "ViewModel Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC8ACCE1BE129C7004B7090 /* ViewModel.swift in Sources */,
 				1AC19F251BD936FD003EFBCB /* ViewController.swift in Sources */,
 				1AC19F231BD936FD003EFBCB /* AppDelegate.swift in Sources */,
 				1AC19F521BD9389F003EFBCB /* FizzBuzzBrain.swift in Sources */,
@@ -328,6 +343,7 @@
 			files = (
 				1AAE2B811BDCC92600104761 /* ViewControllerTests.swift in Sources */,
 				1AA4697A1BD970B700341007 /* FizzBuzzGameTests.swift in Sources */,
+				1AC8ACD11BE12D07004B7090 /* ViewModelTests.swift in Sources */,
 				1AC19F381BD936FE003EFBCB /* FizzBuzzBrainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

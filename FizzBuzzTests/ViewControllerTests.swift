@@ -40,10 +40,15 @@ class ViewControllerTests: XCTestCase {
         XCTAssertNotNil(viewController.buzzButton)
     }
     
-    func testCanIncrementScore() {
+    func testCanSetScoreDisplay() {
         viewController.setScoreTo("1")
         let score = viewController.scoreButton.titleLabel?.text
         XCTAssertEqual(score, "1")
     }
+    
+    func testTapSendMessageToViewModel() {
+        // ??
+    }
+    
 
 }

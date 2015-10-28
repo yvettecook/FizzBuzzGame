@@ -22,9 +22,15 @@ class FizzBuzzUITests: XCTestCase {
     
     func testTapOnScoreButtonShouldIncrementScoreByOne() {
         let app = XCUIApplication()
-        app.buttons["0"].tap()
-        let scoreTitle = app.buttons["0"].title
+        let button = app.buttons["scoreButton"]
+        button.tap()
+        let scoreTitle = button.title
         XCTAssertEqual(scoreTitle, "1")
+    }
+    
+    func test() {
+        XCUIApplication().buttons["scoreButton"].tap()
+        
     }
     
 }
