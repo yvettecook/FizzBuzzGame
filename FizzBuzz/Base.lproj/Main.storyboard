@@ -40,6 +40,9 @@
                                 <state key="normal" title="0">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pjk-41-693"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -59,6 +62,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buzzButton" destination="Jb0-L3-t09" id="MnF-kg-3uh"/>
+                        <outlet property="fizzButton" destination="zZK-xA-NFf" id="s1G-ji-53n"/>
                         <outlet property="scoreButton" destination="url-4j-WNn" id="6sK-BG-jII"/>
                     </connections>
                 </viewController>

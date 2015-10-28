@@ -20,7 +20,7 @@ class ViewControllerTests: XCTestCase {
         viewController = storyboard.instantiateViewControllerWithIdentifier("FizzBuzzViewController") as! ViewController
         UIApplication.sharedApplication().keyWindow!.rootViewController = viewController
         
-//        let _ = viewController
+        let _ = viewController
 
     }
     
@@ -29,11 +29,21 @@ class ViewControllerTests: XCTestCase {
     }
     
     func testShouldHaveScoreDisplayButton() {
-        let button = viewController.scoreButton
-        XCTAssertNotNil(viewController)
-        XCTAssertNotNil(button)
+        XCTAssertNotNil(viewController.scoreButton)
     }
-
-   
+    
+    func testShouldHaveFizzButton() {
+        XCTAssertNotNil(viewController.fizzButton)
+    }
+    
+    func testShouldHaveBuzzButton() {
+        XCTAssertNotNil(viewController.buzzButton)
+    }
+    
+    func testCanIncrementScore() {
+        viewController.setScoreTo("1")
+        let score = viewController.scoreButton.titleLabel?.text
+        XCTAssertEqual(score, "1")
+    }
 
 }

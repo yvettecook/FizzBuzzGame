@@ -143,9 +143,8 @@
 		1AC19F361BD936FE003EFBCB /* FizzBuzzTests */ = {
 			isa = PBXGroup;
 			children = (
-				1AC19F371BD936FE003EFBCB /* FizzBuzzBrainTests.swift */,
-				1AA469791BD970B700341007 /* FizzBuzzGameTests.swift */,
-				1AAE2B801BDCC92600104761 /* ViewControllerTests.swift */,
+				1AC8ACCB1BE11AD6004B7090 /* Model Tests */,
+				1AC8ACCC1BE11AE2004B7090 /* ViewController Tests */,
 				1AC19F391BD936FE003EFBCB /* Info.plist */,
 			);
 			path = FizzBuzzTests;
@@ -167,6 +166,23 @@
 				1AA4697B1BD9764400341007 /* FizzBuzzGame.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		1AC8ACCB1BE11AD6004B7090 /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1AC19F371BD936FE003EFBCB /* FizzBuzzBrainTests.swift */,
+				1AA469791BD970B700341007 /* FizzBuzzGameTests.swift */,
+			);
+			name = "Model Tests";
+			sourceTree = "<group>";
+		};
+		1AC8ACCC1BE11AE2004B7090 /* ViewController Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1AAE2B801BDCC92600104761 /* ViewControllerTests.swift */,
+			);
+			name = "ViewController Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
