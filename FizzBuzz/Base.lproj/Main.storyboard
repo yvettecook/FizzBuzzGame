@@ -113,7 +113,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.32549019607843138" green="0.31764705882352939" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="mnZ-mL-Apl" firstAttribute="height" secondItem="Jb0-L3-t09" secondAttribute="height" id="1nH-nz-iCl"/>

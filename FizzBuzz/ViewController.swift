@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playAgain(sender: UIButton) {
-        state = .Playing
+        viewModel.resetGame()
     }
     
     
@@ -76,10 +76,14 @@ class ViewController: UIViewController {
     func toggleState() {
         switch state {
         case .Playing:
-            setBackgroundColorTo(UIColor.blueColor())
+            setBackgroundColorTo(FizzBuzzColors.activeBackgroundColor)
         case .Lost:
-            setBackgroundColorTo(UIColor.orangeColor())
+            setBackgroundColorTo(FizzBuzzColors.lostBackgroundColor)
         }
+    }
+    
+    func resetGame() {
+        state = .Playing
     }
 
 }

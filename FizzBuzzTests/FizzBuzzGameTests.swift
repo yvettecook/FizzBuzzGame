@@ -60,5 +60,12 @@ class FizzBuzzGameTests: XCTestCase {
         let result = fizzbuzzGame.play(.FizzBuzz)
         XCTAssertTrue(result.rightMove)
     }
+    
+    func testCanResetGame() {
+        fizzbuzzGame.score = 1
+        fizzbuzzGame.reset()
+        let score = fizzbuzzGame.score
+        XCTAssertEqual(score, 0)
+    }
 
 }

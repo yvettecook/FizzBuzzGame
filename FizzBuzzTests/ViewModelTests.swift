@@ -26,16 +26,17 @@ class ViewModelTests: XCTestCase {
     }
     
     func testCanCheckPlayersMove() {
-        let result = viewModel.checkMove(.Number)
-        XCTAssertNotNil(result)
+        XCTAssertTrue(false)
+
+//        viewModel.checkMove()
+//        XCTAssertNotNil(result)
     }
     
     func testIfCorrectMovePlayedNewScoreReturned() {
-        let newScore = viewModel.checkMove(.Number)
-        XCTAssertEqual(newScore, "1")
+        XCTAssertTrue(false)
+
+//        let newScore = viewModel.checkMove(.Number)
+//        XCTAssertEqual(newScore, "1")
     }
-    
-    
-    
 
 }

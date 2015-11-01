@@ -19,6 +19,13 @@ class ViewModel {
             vc.gameLost()
         }
     }
+    
+    func resetGame() {
+        let resetScore = game.reset()
+        vc.nextMovePrompt("\(resetScore)")
+        vc.resetGame()
+        
+    }
         
 }
 
