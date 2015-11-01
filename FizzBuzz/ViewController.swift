@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreButton: UIButton!
     @IBOutlet weak var fizzButton: UIButton!
     @IBOutlet weak var buzzButton: UIButton!
+    @IBOutlet weak var fizzBuzzButton: UIButton!
     
     let viewModel = ViewModel()
     
@@ -34,10 +35,14 @@ class ViewController: UIViewController {
             checkMove(.Fizz)
         case buzzButton:
             checkMove(.Buzz)
+        case fizzBuzzButton:
+            checkMove(.FizzBuzz)
         default:
             break
         }
     }
+
+    
     
     func checkMove(move: Moves) {
         guard
