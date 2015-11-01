@@ -25,9 +25,17 @@ class ViewModelTests: XCTestCase {
         XCTAssertNotNil(viewModel.game)
     }
     
-    func testCanCheckPlayerMove() {
+    func testCanCheckPlayersMove() {
         let result = viewModel.checkMove(.Number)
-        XCTAssertTrue(result)
+        XCTAssertNotNil(result)
     }
+    
+    func testIfCorrectMovePlayedNewScoreReturned() {
+        let newScore = viewModel.checkMove(.Number)
+        XCTAssertEqual(newScore, "1")
+    }
+    
+    
+    
 
 }

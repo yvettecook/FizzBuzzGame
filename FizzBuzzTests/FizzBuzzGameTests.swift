@@ -42,23 +42,23 @@ class FizzBuzzGameTests: XCTestCase {
     
     func testOnPlayAMoveIsEntered() {
         let result = fizzbuzzGame.play(.Number)
-        XCTAssertTrue(result)
+        XCTAssertTrue(result.rightMove)
     }
     
     func testCanCheckIfMoveIsRight() {
         let result = fizzbuzzGame.play(.Number)
-        XCTAssertTrue(result)
+        XCTAssertTrue(result.rightMove)
     }
     
     func testCanCheckIfMoveIsWrong() {
         let result = fizzbuzzGame.play(.Fizz)
-        XCTAssertFalse(result)
+        XCTAssertFalse(result.rightMove)
     }
     
     func testCanCheckForFizzBuzz() {
         fizzbuzzGame.score = 14
         let result = fizzbuzzGame.play(.FizzBuzz)
-        XCTAssertTrue(result)
+        XCTAssertTrue(result.rightMove)
     }
 
 }

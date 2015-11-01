@@ -16,11 +16,14 @@ class FizzBuzzGame {
         brain = FizzBuzzBrain()
     }
     
-    func play(move: Moves) -> Bool {
-        score = score + 1
-        if move == brain.check(score) { return true }
-        else { return false }
-        
+    func play(move: Moves) -> MoveReponse {
+        let newScore = score + 1
+        if move == brain.check(newScore) {
+            score = newScore
+            return MoveReponse(rightMove: true, score: score)
+        } else {
+            return MoveReponse(rightMove: false, score: score)
+        }
     }
     
 }
@@ -28,3 +31,9 @@ class FizzBuzzGame {
 enum Moves {
     case Number, Fizz, Buzz, FizzBuzz
 }
+
+struct MoveReponse {
+    let rightMove: Bool
+    let score: Int
+}
+

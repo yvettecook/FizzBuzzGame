@@ -30,14 +30,20 @@ class ViewController: UIViewController {
         switch sender {
         case scoreButton:
             checkMove(.Number)
+        case fizzButton:
+            checkMove(.Fizz)
+        case buzzButton:
+            checkMove(.Buzz)
         default:
             break
         }
     }
     
-    func checkMove(move: Moves) -> Bool {
-        let checkedResult = viewModel.checkMove(move)
-        return checkedResult
+    func checkMove(move: Moves) {
+        guard
+            let checkedResult = viewModel.checkMove(move)
+            else { print("YOU LOST THE GAME"); return }
+        scoreButton.setTitle(checkedResult, forState: .Normal)
     }
     
     // MARK: Output Actions

@@ -53,14 +53,20 @@ class ViewControllerTests: XCTestCase {
         XCTAssertNotNil(viewController.viewModel)
     }
     
-    func testTapSendMessageToViewModel() {
-        viewController.tapped(viewController.scoreButton)
-        XCTAssertTrue(false)
-    }
+//    func testCanCheckIfMoveCorrect() {
+//        let result = viewController.checkMove(.Number)
+//        XCTAssertEqual(result, "1")
+//    }
+//    
+//    func testCanCheckIfMoveIncorrect() {
+//        let result = viewController.checkMove(.Fizz)
+//        XCTAssertNil(result)
+//    }
     
-    func testCanCheckIfMoveCorrect() {
-        let result = viewController.checkMove(.Number)
-        XCTAssertTrue(result)
+    func testIfMoveCorrectScoreIncremented() {
+        viewController.checkMove(.Number)
+        let newScore = viewController.scoreButton.titleLabel?.text
+        XCTAssertEqual(newScore, "1")
     }
     
 
