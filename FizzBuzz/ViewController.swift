@@ -22,9 +22,12 @@ class ViewController: UIViewController {
         }
     }
     
+    var playButtons : [UIButton]!   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.vc = self
+        playButtons = [scoreButton, fizzButton, buzzButton, fizzBuzzButton]
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,13 +80,27 @@ class ViewController: UIViewController {
         switch state {
         case .Playing:
             setBackgroundColorTo(FizzBuzzColors.activeBackgroundColor)
+            enablePlayButtons()
         case .Lost:
             setBackgroundColorTo(FizzBuzzColors.lostBackgroundColor)
+            disablePlayButtons()
         }
     }
     
     func resetGame() {
         state = .Playing
+    }
+    
+    func disablePlayButtons() {
+        for button in playButtons {
+            button.userInteractionEnabled = false
+        }
+    }
+    
+    func enablePlayButtons() {
+        for button in playButtons {
+            button.userInteractionEnabled = true
+        }
     }
 
 }
