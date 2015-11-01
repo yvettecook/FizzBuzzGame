@@ -16,9 +16,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var fizzBuzzButton: UIButton!
     
     let viewModel = ViewModel()
+    var state = UIState.Playing {
+        didSet {
+            toggleState()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.vc = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,20 +47,39 @@ class ViewController: UIViewController {
             break
         }
     }
-
-    
     
     func checkMove(move: Moves) {
-        guard
-            let checkedResult = viewModel.checkMove(move)
-            else { print("YOU LOST THE GAME"); return }
-        scoreButton.setTitle(checkedResult, forState: .Normal)
+       viewModel.checkMove(move)
     }
+    
+    @IBAction func playAgain(sender: UIButton) {
+        state = .Playing
+    }
+    
     
     // MARK: Output Actions
     
-    func setScoreTo(string: String) {
-        scoreButton.setTitle(string, forState: .Normal)
+    func nextMovePrompt(score: String) {
+        scoreButton.setTitle(score, forState: .Normal)
+    }
+    
+    func gameLost() {
+        self.state = .Lost
+    }
+    
+    func setBackgroundColorTo(color: UIColor) {
+        self.view.backgroundColor = color
+    }
+    
+    // MARK: State
+    
+    func toggleState() {
+        switch state {
+        case .Playing:
+            setBackgroundColorTo(UIColor.blueColor())
+        case .Lost:
+            setBackgroundColorTo(UIColor.orangeColor())
+        }
     }
 
 }

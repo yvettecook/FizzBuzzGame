@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A5BE61B1BE682E800FEF059 /* FizzBuzzColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BE61A1BE682E800FEF059 /* FizzBuzzColors.swift */; };
+		1A5BE61D1BE6898B00FEF059 /* UIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BE61C1BE6898B00FEF059 /* UIState.swift */; };
 		1AA4697A1BD970B700341007 /* FizzBuzzGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA469791BD970B700341007 /* FizzBuzzGameTests.swift */; };
 		1AA4697C1BD9764400341007 /* FizzBuzzGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA4697B1BD9764400341007 /* FizzBuzzGame.swift */; };
 		1AAE2B811BDCC92600104761 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE2B801BDCC92600104761 /* ViewControllerTests.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A5BE61A1BE682E800FEF059 /* FizzBuzzColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzBuzzColors.swift; sourceTree = "<group>"; };
+		1A5BE61C1BE6898B00FEF059 /* UIState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIState.swift; sourceTree = "<group>"; };
 		1AA469791BD970B700341007 /* FizzBuzzGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzBuzzGameTests.swift; sourceTree = "<group>"; };
 		1AA4697B1BD9764400341007 /* FizzBuzzGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FizzBuzzGame.swift; path = Model/FizzBuzzGame.swift; sourceTree = "<group>"; };
 		1AAE2B801BDCC92600104761 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A5BE6191BE682CE00FEF059 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1A5BE61A1BE682E800FEF059 /* FizzBuzzColors.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		1AAE2B7D1BDAB3A200104761 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				1AC19F241BD936FD003EFBCB /* ViewController.swift */,
+				1A5BE61C1BE6898B00FEF059 /* UIState.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -135,6 +148,7 @@
 		1AC19F211BD936FD003EFBCB /* FizzBuzz */ = {
 			isa = PBXGroup;
 			children = (
+				1A5BE6191BE682CE00FEF059 /* Helpers */,
 				1AC19F501BD93887003EFBCB /* Model */,
 				1AAE2B7F1BDAB84400104761 /* View Model */,
 				1AAE2B7E1BDAB80A00104761 /* View Controller */,
@@ -334,6 +348,8 @@
 				1AC19F231BD936FD003EFBCB /* AppDelegate.swift in Sources */,
 				1AC19F521BD9389F003EFBCB /* FizzBuzzBrain.swift in Sources */,
 				1AA4697C1BD9764400341007 /* FizzBuzzGame.swift in Sources */,
+				1A5BE61D1BE6898B00FEF059 /* UIState.swift in Sources */,
+				1A5BE61B1BE682E800FEF059 /* FizzBuzzColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

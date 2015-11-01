@@ -9,13 +9,14 @@
 class ViewModel {
     
     let game = FizzBuzzGame()
+    var vc : ViewController!
     
-    func checkMove(move: Moves) -> String? {
+    func checkMove(move: Moves) {
         let response = game.play(move)
         if response.rightMove {
-            return "\(response.score)"
+            vc.nextMovePrompt("\(response.score)")
         } else {
-            return nil
+            vc.gameLost()
         }
     }
         
