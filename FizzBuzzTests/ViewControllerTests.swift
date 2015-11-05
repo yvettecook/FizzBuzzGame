@@ -40,29 +40,11 @@ class ViewControllerTests: XCTestCase {
         XCTAssertNotNil(viewController.buzzButton)
     }
     
-    func testCanSetScoreDisplay() {
-        XCTAssertTrue(false)
-//        viewController.setScoreTo("1")
-//        let score = viewController.scoreButton.titleLabel?.text
-//        XCTAssertEqual(score, "1")
-    }
-    
-    
     // MARK : Connection to View Model
     
     func testShouldHaveViewModel() {
         XCTAssertNotNil(viewController.viewModel)
     }
-    
-//    func testCanCheckIfMoveCorrect() {
-//        let result = viewController.checkMove(.Number)
-//        XCTAssertEqual(result, "1")
-//    }
-//    
-//    func testCanCheckIfMoveIncorrect() {
-//        let result = viewController.checkMove(.Fizz)
-//        XCTAssertNil(result)
-//    }
     
     func testIfMoveCorrectScoreIncremented() {
         viewController.checkMove(.Number)

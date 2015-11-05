@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A119EF51BEBF5D500F75649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A119EF41BEBF5D500F75649 /* Assets.xcassets */; };
 		1A5BE61B1BE682E800FEF059 /* FizzBuzzColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BE61A1BE682E800FEF059 /* FizzBuzzColors.swift */; };
 		1A5BE61D1BE6898B00FEF059 /* UIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BE61C1BE6898B00FEF059 /* UIState.swift */; };
 		1A5BE6211BE692B600FEF059 /* GameMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BE6201BE692B600FEF059 /* GameMemory.swift */; };
@@ -17,7 +18,6 @@
 		1AC19F231BD936FD003EFBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F221BD936FD003EFBCB /* AppDelegate.swift */; };
 		1AC19F251BD936FD003EFBCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F241BD936FD003EFBCB /* ViewController.swift */; };
 		1AC19F281BD936FD003EFBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC19F261BD936FD003EFBCB /* Main.storyboard */; };
-		1AC19F2A1BD936FD003EFBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AC19F291BD936FD003EFBCB /* Assets.xcassets */; };
 		1AC19F2D1BD936FD003EFBCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC19F2B1BD936FD003EFBCB /* LaunchScreen.storyboard */; };
 		1AC19F381BD936FE003EFBCB /* FizzBuzzBrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F371BD936FE003EFBCB /* FizzBuzzBrainTests.swift */; };
 		1AC19F431BD936FE003EFBCB /* FizzBuzzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC19F421BD936FE003EFBCB /* FizzBuzzUITests.swift */; };
@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A119EF41BEBF5D500F75649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A5BE61A1BE682E800FEF059 /* FizzBuzzColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzBuzzColors.swift; sourceTree = "<group>"; };
 		1A5BE61C1BE6898B00FEF059 /* UIState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIState.swift; sourceTree = "<group>"; };
 		1A5BE6201BE692B600FEF059 /* GameMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameMemory.swift; path = FizzBuzz/Model/GameMemory.swift; sourceTree = SOURCE_ROOT; };
@@ -55,7 +56,6 @@
 		1AC19F221BD936FD003EFBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AC19F241BD936FD003EFBCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AC19F271BD936FD003EFBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1AC19F291BD936FD003EFBCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AC19F2C1BD936FD003EFBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AC19F2E1BD936FD003EFBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AC19F331BD936FE003EFBCB /* FizzBuzzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FizzBuzzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +107,7 @@
 			children = (
 				1AC19F2B1BD936FD003EFBCB /* LaunchScreen.storyboard */,
 				1AC19F261BD936FD003EFBCB /* Main.storyboard */,
-				1AC19F291BD936FD003EFBCB /* Assets.xcassets */,
+				1A119EF41BEBF5D500F75649 /* Assets.xcassets */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AC19F2D1BD936FD003EFBCB /* LaunchScreen.storyboard in Resources */,
-				1AC19F2A1BD936FD003EFBCB /* Assets.xcassets in Resources */,
+				1A119EF51BEBF5D500F75649 /* Assets.xcassets in Resources */,
 				1AC19F281BD936FD003EFBCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

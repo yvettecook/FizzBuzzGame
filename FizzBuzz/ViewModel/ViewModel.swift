@@ -24,7 +24,6 @@ class ViewModel {
         let resetScore = game.reset()
         vc.nextMovePrompt("\(resetScore)")
         vc.resetGame()
-        
     }
         
 }
