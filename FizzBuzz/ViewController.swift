@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var fizzButton: UIButton!
     @IBOutlet weak var buzzButton: UIButton!
     @IBOutlet weak var fizzBuzzButton: UIButton!
+    @IBOutlet weak var highScoreLabel: UILabel!
+    
+    var gradient : CAGradientLayer?
     
     let viewModel = ViewModel()
     var state = UIState.Playing {
@@ -22,12 +25,14 @@ class ViewController: UIViewController {
         }
     }
     
-    var playButtons : [UIButton]!   
+    var playButtons : [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.vc = self
         playButtons = [scoreButton, fizzButton, buzzButton, fizzBuzzButton]
+        
+        setUpTestGradient()
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,5 +108,39 @@ class ViewController: UIViewController {
         }
     }
 
+}
+
+extension ViewController {
+    
+    // MARK: Background animation
+    
+    func setUpTestGradient() {
+        gradient = CAGradientLayer()
+        gradient?.frame = view.bounds
+        gradient?.colors = [UIColor.yellowColor().CGColor]
+        view.layer.insertSublayer(gradient!, atIndex:0)
+    
+        animateLayer()
+
+    }
+    
+    func animateLayer() {
+        let fromColors = [UIColor.redColor().CGColor, UIColor.redColor().CGColor]
+        let toColors = [UIColor.blueColor().CGColor, UIColor.blueColor().CGColor]
+        
+        gradient?.colors = toColors
+        
+        let animation = CABasicAnimation(keyPath: "colors")
+        animation.fromValue = fromColors
+        animation.toValue = toColors
+        animation.duration = 10.0
+        animation.removedOnCompletion = true
+        animation.fillMode = kCAFillModeBoth
+        animation.delegate = self
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        
+        gradient?.addAnimation(animation, forKey: "animateGradient")
+    }
+    
 }
 

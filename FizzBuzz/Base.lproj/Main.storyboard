@@ -186,24 +186,17 @@
                                 <exclude reference="Bam-5P-gAd"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="bEr-UG-Wc7" appends="YES" id="0GO-v3-sPW"/>
-                        </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="buzzButton" destination="Jb0-L3-t09" id="MnF-kg-3uh"/>
                         <outlet property="fizzButton" destination="zZK-xA-NFf" id="s1G-ji-53n"/>
                         <outlet property="fizzBuzzButton" destination="mnZ-mL-Apl" id="iqB-0U-iaK"/>
+                        <outlet property="highScoreLabel" destination="Z97-MW-4Rd" id="0dB-IT-3n1"/>
                         <outlet property="scoreButton" destination="url-4j-WNn" id="6sK-BG-jII"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="bEr-UG-Wc7">
-                    <connections>
-                        <action selector="swipedDown:" destination="BYZ-38-t0r" id="R1k-Vc-KzO"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="160" y="388"/>
         </scene>

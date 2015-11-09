@@ -6,14 +6,21 @@
 //  Copyright © 2015 YvetteCook. All rights reserved.
 //
 
-class FizzBuzzGame {
+import Foundation
+
+class FizzBuzzGame: NSObject {
+    
+    static let sharedInstance = FizzBuzzGame()
     
     var score : Int!
     let brain : FizzBuzzBrain!
+    let memory : GameMemory!
     
-    init(){
+    private override init(){
         score = 0
         brain = FizzBuzzBrain()
+        memory = GameMemory()
+        super.init()
     }
     
     func play(move: Moves) -> MoveReponse {
@@ -22,6 +29,7 @@ class FizzBuzzGame {
             score = newScore
             return MoveReponse(rightMove: true, score: score)
         } else {
+            memory.storeScore(score)
             return MoveReponse(rightMove: false, score: score)
         }
     }
@@ -29,6 +37,14 @@ class FizzBuzzGame {
     func reset() -> Int {
         score = 0
         return score
+    }
+    
+    func getHighScore() -> Int {
+        return memory.getHighScore()
+    }
+    
+    func saveScores() {
+        memory.saveScores()
     }
     
 }
@@ -41,4 +57,8 @@ struct MoveReponse {
     let rightMove: Bool
     let score: Int
 }
+
+
+
+
 

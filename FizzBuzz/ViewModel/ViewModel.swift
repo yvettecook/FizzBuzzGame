@@ -6,10 +6,20 @@
 //  Copyright © 2015 YvetteCook. All rights reserved.
 //
 
+import UIKit
+
 class ViewModel {
     
-    let game = FizzBuzzGame()
-    var vc : ViewController!
+    let game : FizzBuzzGame!
+    var vc : ViewController! {
+        didSet {
+            updateHighScore()
+        }
+    }
+    
+    init() {
+        self.game = FizzBuzzGame.sharedInstance
+    }
     
     func checkMove(move: Moves) {
         let response = game.play(move)
@@ -17,6 +27,7 @@ class ViewModel {
             vc.nextMovePrompt("\(response.score)")
         } else {
             vc.gameLost()
+            updateHighScore()
         }
     }
     
@@ -25,6 +36,11 @@ class ViewModel {
         vc.nextMovePrompt("\(resetScore)")
         vc.resetGame()
     }
-        
+    
+    func updateHighScore() {
+        let highScore = game.getHighScore()
+        vc.highScoreLabel.text = "\(highScore)"
+    }
+    
 }
 
