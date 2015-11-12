@@ -14,7 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var fizzButton: UIButton!
     @IBOutlet weak var buzzButton: UIButton!
     @IBOutlet weak var fizzBuzzButton: UIButton!
+    
     @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak var hsLabel: UILabel!
+    @IBOutlet weak var multiplesButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
     
     var gradient : CAGradientLayer?
     
@@ -25,14 +30,14 @@ class ViewController: UIViewController {
         }
     }
     
-    var playButtons : [UIButton]!
+    var playButtons: [UIButton]!
+    var settingsViews: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.vc = self
         playButtons = [scoreButton, fizzButton, buzzButton, fizzBuzzButton]
-        
-        setUpTestGradient()
+        settingsViews = [highScoreLabel, hsLabel, multiplesButton, settingsButton, playButton]
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,9 +91,11 @@ class ViewController: UIViewController {
         case .Playing:
             setBackgroundColorTo(FizzBuzzColors.activeBackgroundColor)
             enablePlayButtons()
+            hideSettingsButtons()
         case .Lost:
             setBackgroundColorTo(FizzBuzzColors.lostBackgroundColor)
             disablePlayButtons()
+            showSettingsButtons()
         }
     }
     
@@ -105,6 +112,18 @@ class ViewController: UIViewController {
     func enablePlayButtons() {
         for button in playButtons {
             button.userInteractionEnabled = true
+        }
+    }
+    
+    func hideSettingsButtons() {
+        for view in settingsViews {
+            view.hidden = true
+        }
+    }
+
+    func showSettingsButtons() {
+        for view in settingsViews {
+            view.hidden = false
         }
     }
 

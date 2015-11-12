@@ -61,10 +61,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuC-WK-PMq">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iuC-WK-PMq">
                                 <rect key="frame" x="71" y="71" width="458" height="458"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="url-4j-WNn">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="url-4j-WNn">
                                         <rect key="frame" x="0.0" y="0.0" width="215" height="215"/>
                                         <animations/>
                                         <accessibility key="accessibilityConfiguration" identifier="scoreButton" label="scoreButton"/>
@@ -84,7 +84,7 @@
                                             <action selector="tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pjk-41-693"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZK-xA-NFf">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZK-xA-NFf">
                                         <rect key="frame" x="243" y="0.0" width="215" height="215"/>
                                         <animations/>
                                         <state key="normal" image="champagne80" backgroundImage="white_button_border">
@@ -94,7 +94,7 @@
                                             <action selector="tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTZ-7R-ePd"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb0-L3-t09">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb0-L3-t09">
                                         <rect key="frame" x="0.0" y="243" width="215" height="215"/>
                                         <animations/>
                                         <state key="normal" image="lightning80" backgroundImage="white_button_border">
@@ -104,7 +104,7 @@
                                             <action selector="tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEM-WF-uij"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnZ-mL-Apl">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnZ-mL-Apl">
                                         <rect key="frame" x="243" y="243" width="215" height="215"/>
                                         <animations/>
                                         <state key="normal" image="space80" backgroundImage="white_button_border">
@@ -193,7 +193,11 @@
                         <outlet property="fizzButton" destination="zZK-xA-NFf" id="s1G-ji-53n"/>
                         <outlet property="fizzBuzzButton" destination="mnZ-mL-Apl" id="iqB-0U-iaK"/>
                         <outlet property="highScoreLabel" destination="Z97-MW-4Rd" id="0dB-IT-3n1"/>
+                        <outlet property="hsLabel" destination="w9w-gd-cDs" id="yIf-CE-v3O"/>
+                        <outlet property="multiplesButton" destination="yPK-BZ-goL" id="udH-6v-igV"/>
+                        <outlet property="playButton" destination="6pl-dG-NgG" id="BLv-nc-jI7"/>
                         <outlet property="scoreButton" destination="url-4j-WNn" id="6sK-BG-jII"/>
+                        <outlet property="settingsButton" destination="3VX-wa-0S1" id="vde-QL-mbL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
