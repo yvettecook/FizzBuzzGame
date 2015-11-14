@@ -21,11 +21,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     
+    @IBOutlet weak var background: UIView!
     
-    var gradient : CAGradientLayer?
+    var fluidView: BAFluidView!
     
     let viewModel = ViewModel()
-    var state = UIState.Playing {
+    var state = UIState.Ready {
         didSet {
             toggleState()
         }
@@ -36,7 +37,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpFluidLayer()
         viewModel.vc = self
         playButtons = [scoreButton, fizzButton, buzzButton, fizzBuzzButton]
         settingsViews = [highScoreLabel, hsLabel, multiplesButton, settingsButton, playButton]
@@ -49,6 +49,9 @@ class ViewController: UIViewController {
     // MARK: Input Actions
     
     @IBAction func tapped(sender: UIButton) {
+        if state != .Playing {
+            state = .Playing
+        }
         switch sender {
         case scoreButton:
             checkMove(.Number)
@@ -83,14 +86,19 @@ class ViewController: UIViewController {
     }
     
     func setBackgroundColorTo(color: UIColor) {
-        self.view.backgroundColor = color
+        self.background.backgroundColor = color
     }
     
     // MARK: State
     
     func toggleState() {
         switch state {
+        case .Ready:
+            setBackgroundColorTo(FizzBuzzColors.lostBackgroundColor)
+            enablePlayButtons()
+            showSettingsButtons()
         case .Playing:
+            setUpFluidLayer()
             setBackgroundColorTo(FizzBuzzColors.activeBackgroundColor)
             enablePlayButtons()
             hideSettingsButtons()
@@ -98,6 +106,7 @@ class ViewController: UIViewController {
             setBackgroundColorTo(FizzBuzzColors.lostBackgroundColor)
             disablePlayButtons()
             showSettingsButtons()
+            removeFluidView()
         }
     }
     
@@ -136,42 +145,28 @@ extension ViewController {
     // MARK: FLuidAnimation
     
     func setUpFluidLayer() {
-        let fluidView = BAFluidView(frame: self.view.frame, startElevation: 0.0)
+        print("FluidView: \(fluidView)")
+        fluidView = BAFluidView(frame: self.background.frame, startElevation: 0.0)
+        fluidView.fillDuration = 30.0
         fluidView.fillTo(1.0)
-        fluidView.fillColor = UIColor.blueColor()
+        fluidView.fillColor = FizzBuzzColors.timerBackgroundColor
+        fluidView.fillRepeatCount = 1
+        fluidView.fillAutoReverse = false
+        self.background.addSubview(fluidView)
+    }
+    
+    func pauseFluidView() {
+        fluidView.keepStationary()
+        fluidView.stopAnimation()
+    }
+
+    func playFluidView() {
         fluidView.startAnimation()
     }
-
     
-    // MARK: Background animation
-    
-    
-    func setUpTestGradient() {
-        gradient = CAGradientLayer()
-        gradient?.frame = view.bounds
-        gradient?.colors = [UIColor.yellowColor().CGColor]
-        view.layer.insertSublayer(gradient!, atIndex:0)
-    
-        animateLayer()
-
-    }
-    
-    func animateLayer() {
-        let fromColors = [UIColor.redColor().CGColor, UIColor.redColor().CGColor]
-        let toColors = [UIColor.blueColor().CGColor, UIColor.blueColor().CGColor]
-        
-        gradient?.colors = toColors
-        
-        let animation = CABasicAnimation(keyPath: "colors")
-        animation.fromValue = fromColors
-        animation.toValue = toColors
-        animation.duration = 10.0
-        animation.removedOnCompletion = true
-        animation.fillMode = kCAFillModeBoth
-        animation.delegate = self
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        
-        gradient?.addAnimation(animation, forKey: "animateGradient")
+    func removeFluidView() {
+        fluidView.removeFromSuperview()
+        fluidView = nil
     }
     
 }
