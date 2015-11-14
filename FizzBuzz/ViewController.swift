@@ -36,12 +36,14 @@ class ViewController: UIViewController {
     }
     
     var playButtons: [UIButton]!
+    var fbButtons: [UIButton]!
     var settingsViews: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.vc = self
         playButtons = [scoreButton, fizzButton, buzzButton, fizzBuzzButton]
+        fbButtons = [fizzButton, buzzButton, fizzBuzzButton]
         settingsViews = [highScoreLabel, hsLabel, multiplesButton, settingsButton, playButton]
     }
 
@@ -99,9 +101,10 @@ class ViewController: UIViewController {
     func toggleState() {
         switch state {
         case .Ready:
-            setBackgroundColorTo(FizzBuzzColors.lostBackgroundColor)
+            setBackgroundColorTo(FizzBuzzColors.readyBackgroundColor)
             enablePlayButtons()
             showSettingsButtons()
+            showFizzBuzzButtons()
         case .Playing:
             setUpFluidLayer()
             startTimer()
@@ -113,11 +116,12 @@ class ViewController: UIViewController {
             disablePlayButtons()
             showSettingsButtons()
             removeFluidView()
+            hideFizzBuzzButtons()
         }
     }
     
     func resetGame() {
-        state = .Playing
+        state = .Ready
     }
     
     func disablePlayButtons() {
@@ -141,6 +145,18 @@ class ViewController: UIViewController {
     func showSettingsButtons() {
         for view in settingsViews {
             view.hidden = false
+        }
+    }
+    
+    func hideFizzBuzzButtons() {
+        for button in fbButtons {
+            button.hidden = true
+        }
+    }
+    
+    func showFizzBuzzButtons() {
+        for button in fbButtons {
+            button.hidden = false
         }
     }
     
