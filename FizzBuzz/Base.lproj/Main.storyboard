@@ -19,6 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Zy-aW-W5m">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z97-MW-4Rd">
                                 <rect key="frame" x="20" y="14" width="47" height="47"/>
                                 <animations/>
@@ -61,10 +66,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iuC-WK-PMq">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuC-WK-PMq">
                                 <rect key="frame" x="71" y="71" width="458" height="458"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="url-4j-WNn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="url-4j-WNn">
                                         <rect key="frame" x="0.0" y="0.0" width="215" height="215"/>
                                         <animations/>
                                         <accessibility key="accessibilityConfiguration" identifier="scoreButton" label="scoreButton"/>
@@ -84,7 +89,7 @@
                                             <action selector="tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pjk-41-693"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZK-xA-NFf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZK-xA-NFf">
                                         <rect key="frame" x="243" y="0.0" width="215" height="215"/>
                                         <animations/>
                                         <state key="normal" image="champagne80" backgroundImage="white_button_border">
@@ -94,7 +99,7 @@
                                             <action selector="tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTZ-7R-ePd"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb0-L3-t09">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb0-L3-t09">
                                         <rect key="frame" x="0.0" y="243" width="215" height="215"/>
                                         <animations/>
                                         <state key="normal" image="lightning80" backgroundImage="white_button_border">
@@ -104,7 +109,7 @@
                                             <action selector="tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEM-WF-uij"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnZ-mL-Apl">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnZ-mL-Apl">
                                         <rect key="frame" x="243" y="243" width="215" height="215"/>
                                         <animations/>
                                         <state key="normal" image="space80" backgroundImage="white_button_border">

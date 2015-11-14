@@ -24,6 +24,9 @@
 		1AC8ACCE1BE129C7004B7090 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8ACCD1BE129C7004B7090 /* ViewModel.swift */; };
 		1AC8ACD11BE12D07004B7090 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8ACD01BE12D07004B7090 /* ViewModelTests.swift */; };
 		1ACA267B1BF155A200F82AF9 /* FizzBuzzGameMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA267A1BF155A200F82AF9 /* FizzBuzzGameMemory.swift */; };
+		1AF579121BF4EDD900F320AE /* FluidBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF579111BF4EDD900F320AE /* FluidBackground.swift */; };
+		1AF579201BF4F1E100F320AE /* BAFluidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF5791D1BF4F1E100F320AE /* BAFluidView.m */; };
+		1AF579211BF4F1E100F320AE /* UIColor+ColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF5791F1BF4F1E100F320AE /* UIColor+ColorWithHex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,12 @@
 		1AC8ACCD1BE129C7004B7090 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = ViewModel/ViewModel.swift; sourceTree = "<group>"; };
 		1AC8ACD01BE12D07004B7090 /* ViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		1ACA267A1BF155A200F82AF9 /* FizzBuzzGameMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FizzBuzzGameMemory.swift; path = Model/FizzBuzzGameMemory.swift; sourceTree = "<group>"; };
+		1AF579111BF4EDD900F320AE /* FluidBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FluidBackground.swift; sourceTree = "<group>"; };
+		1AF5791B1BF4F1E100F320AE /* FizzBuzz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FizzBuzz-Bridging-Header.h"; sourceTree = "<group>"; };
+		1AF5791C1BF4F1E100F320AE /* BAFluidView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAFluidView.h; sourceTree = "<group>"; };
+		1AF5791D1BF4F1E100F320AE /* BAFluidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFluidView.m; sourceTree = "<group>"; };
+		1AF5791E1BF4F1E100F320AE /* UIColor+ColorWithHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorWithHex.h"; sourceTree = "<group>"; };
+		1AF5791F1BF4F1E100F320AE /* UIColor+ColorWithHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorWithHex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +161,7 @@
 		1AC19F211BD936FD003EFBCB /* FizzBuzz */ = {
 			isa = PBXGroup;
 			children = (
+				1AF5790E1BF4EA9A00F320AE /* External Frameworks */,
 				1A5BE6191BE682CE00FEF059 /* Helpers */,
 				1AC19F501BD93887003EFBCB /* Model */,
 				1AAE2B7F1BDAB84400104761 /* View Model */,
@@ -219,6 +229,19 @@
 			name = "ViewModel Tests";
 			sourceTree = "<group>";
 		};
+		1AF5790E1BF4EA9A00F320AE /* External Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AF579111BF4EDD900F320AE /* FluidBackground.swift */,
+				1AF5791C1BF4F1E100F320AE /* BAFluidView.h */,
+				1AF5791D1BF4F1E100F320AE /* BAFluidView.m */,
+				1AF5791E1BF4F1E100F320AE /* UIColor+ColorWithHex.h */,
+				1AF5791F1BF4F1E100F320AE /* UIColor+ColorWithHex.m */,
+				1AF5791B1BF4F1E100F320AE /* FizzBuzz-Bridging-Header.h */,
+			);
+			name = "External Frameworks";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +304,7 @@
 		1AC19F171BD936FD003EFBCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = YvetteCook;
 				TargetAttributes = {
@@ -351,12 +375,15 @@
 			files = (
 				1AC8ACCE1BE129C7004B7090 /* ViewModel.swift in Sources */,
 				1AC19F251BD936FD003EFBCB /* ViewController.swift in Sources */,
+				1AF579201BF4F1E100F320AE /* BAFluidView.m in Sources */,
 				1AC19F231BD936FD003EFBCB /* AppDelegate.swift in Sources */,
 				1AC19F521BD9389F003EFBCB /* FizzBuzzBrain.swift in Sources */,
 				1ACA267B1BF155A200F82AF9 /* FizzBuzzGameMemory.swift in Sources */,
+				1AF579211BF4F1E100F320AE /* UIColor+ColorWithHex.m in Sources */,
 				1AA4697C1BD9764400341007 /* FizzBuzzGame.swift in Sources */,
 				1A5BE61D1BE6898B00FEF059 /* UIState.swift in Sources */,
 				1A5BE61B1BE682E800FEF059 /* FizzBuzzColors.swift in Sources */,
+				1AF579121BF4EDD900F320AE /* FluidBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,10 +531,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FizzBuzz",
+				);
 				INFOPLIST_FILE = FizzBuzz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FanVox.FizzBuzz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FizzBuzz/FizzBuzz-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -515,10 +549,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FizzBuzz",
+				);
 				INFOPLIST_FILE = FizzBuzz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FanVox.FizzBuzz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FizzBuzz/FizzBuzz-Bridging-Header.h";
 			};
 			name = Release;
 		};

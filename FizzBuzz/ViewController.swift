@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     
+    
     var gradient : CAGradientLayer?
     
     let viewModel = ViewModel()
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpFluidLayer()
         viewModel.vc = self
         playButtons = [scoreButton, fizzButton, buzzButton, fizzBuzzButton]
         settingsViews = [highScoreLabel, hsLabel, multiplesButton, settingsButton, playButton]
@@ -131,7 +133,18 @@ class ViewController: UIViewController {
 
 extension ViewController {
     
+    // MARK: FLuidAnimation
+    
+    func setUpFluidLayer() {
+        let fluidView = BAFluidView(frame: self.view.frame, startElevation: 0.0)
+        fluidView.fillTo(1.0)
+        fluidView.fillColor = UIColor.blueColor()
+        fluidView.startAnimation()
+    }
+
+    
     // MARK: Background animation
+    
     
     func setUpTestGradient() {
         gradient = CAGradientLayer()

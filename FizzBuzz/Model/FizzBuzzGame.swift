@@ -16,7 +16,7 @@ class FizzBuzzGame: NSObject {
     let brain : FizzBuzzBrain!
     let memory : GameMemory!
     
-    private override init(){
+    override init(){
         score = 0
         brain = FizzBuzzBrain()
         memory = GameMemory()
