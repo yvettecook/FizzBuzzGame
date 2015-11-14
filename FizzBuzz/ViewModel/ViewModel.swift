@@ -42,5 +42,8 @@ class ViewModel {
         vc.highScoreLabel.text = "\(highScore)"
     }
     
+    func timerRunOut() {
+        checkMove(.EndGame)
+    }
 }
 

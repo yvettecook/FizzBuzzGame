@@ -50,7 +50,7 @@ class FizzBuzzGame: NSObject {
 }
 
 enum Moves {
-    case Number, Fizz, Buzz, FizzBuzz
+    case Number, Fizz, Buzz, FizzBuzz, EndGame
 }
 
 struct MoveReponse {

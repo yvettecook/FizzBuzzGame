@@ -23,7 +23,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var background: UIView!
     
+    var gameTime = 30.0
+    
     var fluidView: BAFluidView!
+    var gameTimer: NSTimer?
     
     let viewModel = ViewModel()
     var state = UIState.Ready {
@@ -83,6 +86,8 @@ class ViewController: UIViewController {
     
     func gameLost() {
         self.state = .Lost
+        guard let timer = gameTimer else { return }
+        timer.invalidate()
     }
     
     func setBackgroundColorTo(color: UIColor) {
@@ -99,6 +104,7 @@ class ViewController: UIViewController {
             showSettingsButtons()
         case .Playing:
             setUpFluidLayer()
+            startTimer()
             setBackgroundColorTo(FizzBuzzColors.activeBackgroundColor)
             enablePlayButtons()
             hideSettingsButtons()
@@ -137,6 +143,19 @@ class ViewController: UIViewController {
             view.hidden = false
         }
     }
+    
+    func startTimer() {
+        gameTimer = NSTimer(timeInterval: gameTime, target: self, selector:"timerFinished", userInfo: nil, repeats: false)
+        NSRunLoop.currentRunLoop().addTimer(gameTimer!, forMode: NSRunLoopCommonModes)
+    }
+    
+    func timerFinished() {
+        viewModel.timerRunOut()
+    }
+    
+    func stopTimer() {
+        gameTimer?.invalidate()
+    }
 
 }
 
@@ -145,9 +164,8 @@ extension ViewController {
     // MARK: FLuidAnimation
     
     func setUpFluidLayer() {
-        print("FluidView: \(fluidView)")
         fluidView = BAFluidView(frame: self.background.frame, startElevation: 0.0)
-        fluidView.fillDuration = 30.0
+        fluidView.fillDuration = gameTime
         fluidView.fillTo(1.0)
         fluidView.fillColor = FizzBuzzColors.timerBackgroundColor
         fluidView.fillRepeatCount = 1
