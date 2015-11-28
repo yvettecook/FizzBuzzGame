@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var background: UIView!
     
-    var gameTime = 5.0
+    var gameTime = 30.0
     
     var fluidView: BAFluidView!
     var gameTimer: NSTimer?
