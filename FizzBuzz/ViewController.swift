@@ -173,9 +173,7 @@ class ViewController: UIViewController {
     // MARK: Segue
     
     @IBAction func unwindToHome2(sender: UIStoryboardSegue) {
-        print("Unwind damnit")
     }
-    
 
 }
 

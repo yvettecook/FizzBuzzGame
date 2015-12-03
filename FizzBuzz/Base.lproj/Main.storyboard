@@ -218,7 +218,7 @@
         <!--Tutorial One View Controller-->
         <scene sceneID="TVC-Ay-DDb">
             <objects>
-                <viewController id="HbB-f8-TH1" customClass="TutorialOneViewController" customModule="FizzBuzz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialViewController" id="HbB-f8-TH1" customClass="TutorialOneViewController" customModule="FizzBuzz" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YHv-JU-q3a"/>
                         <viewControllerLayoutGuide type="bottom" id="86d-pT-7hd"/>
