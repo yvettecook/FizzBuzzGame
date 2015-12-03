@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A119EF51BEBF5D500F75649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A119EF41BEBF5D500F75649 /* Assets.xcassets */; };
-		1A2F46CB1C0B6C5800CEAAB6 /* TutorialThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F46CA1C0B6C5800CEAAB6 /* TutorialThreeViewController.swift */; };
 		1A2F46CE1C0B6C8F00CEAAB6 /* TutorialOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F46CC1C0B6C8F00CEAAB6 /* TutorialOneViewController.swift */; };
-		1A2F46CF1C0B6C8F00CEAAB6 /* TutorialTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F46CD1C0B6C8F00CEAAB6 /* TutorialTwoViewController.swift */; };
-		1A2F46D11C0B733000CEAAB6 /* TutorialFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F46D01C0B733000CEAAB6 /* TutorialFourViewController.swift */; };
 		1A5BE61B1BE682E800FEF059 /* FizzBuzzColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BE61A1BE682E800FEF059 /* FizzBuzzColors.swift */; };
 		1A5BE61D1BE6898B00FEF059 /* UIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BE61C1BE6898B00FEF059 /* UIState.swift */; };
 		1A5BE6231BE692E300FEF059 /* GameMemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BE6221BE692E300FEF059 /* GameMemoryTests.swift */; };
@@ -52,10 +49,7 @@
 
 /* Begin PBXFileReference section */
 		1A119EF41BEBF5D500F75649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1A2F46CA1C0B6C5800CEAAB6 /* TutorialThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialThreeViewController.swift; sourceTree = "<group>"; };
-		1A2F46CC1C0B6C8F00CEAAB6 /* TutorialOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialOneViewController.swift; sourceTree = "<group>"; };
-		1A2F46CD1C0B6C8F00CEAAB6 /* TutorialTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialTwoViewController.swift; sourceTree = "<group>"; };
-		1A2F46D01C0B733000CEAAB6 /* TutorialFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialFourViewController.swift; sourceTree = "<group>"; };
+		1A2F46CC1C0B6C8F00CEAAB6 /* TutorialOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialOneViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		1A5BE61A1BE682E800FEF059 /* FizzBuzzColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzBuzzColors.swift; sourceTree = "<group>"; };
 		1A5BE61C1BE6898B00FEF059 /* UIState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIState.swift; sourceTree = "<group>"; };
 		1A5BE6221BE692E300FEF059 /* GameMemoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMemoryTests.swift; sourceTree = "<group>"; };
@@ -115,9 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				1A2F46CC1C0B6C8F00CEAAB6 /* TutorialOneViewController.swift */,
-				1A2F46CD1C0B6C8F00CEAAB6 /* TutorialTwoViewController.swift */,
-				1A2F46CA1C0B6C5800CEAAB6 /* TutorialThreeViewController.swift */,
-				1A2F46D01C0B733000CEAAB6 /* TutorialFourViewController.swift */,
 			);
 			name = Tutorial;
 			sourceTree = "<group>";
@@ -393,19 +384,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A2F46D11C0B733000CEAAB6 /* TutorialFourViewController.swift in Sources */,
 				1AC8ACCE1BE129C7004B7090 /* ViewModel.swift in Sources */,
 				1AC19F251BD936FD003EFBCB /* ViewController.swift in Sources */,
 				1AF579201BF4F1E100F320AE /* BAFluidView.m in Sources */,
 				1AC19F231BD936FD003EFBCB /* AppDelegate.swift in Sources */,
 				1AC19F521BD9389F003EFBCB /* FizzBuzzBrain.swift in Sources */,
-				1A2F46CB1C0B6C5800CEAAB6 /* TutorialThreeViewController.swift in Sources */,
 				1ACA267B1BF155A200F82AF9 /* FizzBuzzGameMemory.swift in Sources */,
 				1AF579211BF4F1E100F320AE /* UIColor+ColorWithHex.m in Sources */,
 				1AA4697C1BD9764400341007 /* FizzBuzzGame.swift in Sources */,
 				1A5BE61D1BE6898B00FEF059 /* UIState.swift in Sources */,
 				1A2F46CE1C0B6C8F00CEAAB6 /* TutorialOneViewController.swift in Sources */,
-				1A2F46CF1C0B6C8F00CEAAB6 /* TutorialTwoViewController.swift in Sources */,
 				1A5BE61B1BE682E800FEF059 /* FizzBuzzColors.swift in Sources */,
 				1AF579121BF4EDD900F320AE /* FluidBackground.swift in Sources */,
 			);

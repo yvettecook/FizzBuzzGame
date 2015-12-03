@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C48a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -58,9 +58,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HbB-f8-TH1" kind="popoverPresentation" popoverAnchorView="3VX-wa-0S1" id="QJq-aj-802">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
-                                    </segue>
+                                    <segue destination="HbB-f8-TH1" kind="show" identifier="showTutorialSegue" action="showDetailViewController:sender:" id="QJq-aj-802"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPK-BZ-goL">
@@ -236,113 +234,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="5U3-1t-TQZ">
-                                <rect key="frame" x="209" y="434" width="19" height="29"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="KdT-Xa-ikc"/>
-                                    <constraint firstAttribute="width" constant="19" id="dIt-ku-8Vr"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O1-R4-TeC">
-                                <rect key="frame" x="141" y="471" width="99" height="37"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="99" id="gvi-pI-pEB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTz-x4-gdl">
-                                <rect key="frame" x="234" y="294" width="132" height="132"/>
-                                <animations/>
-                                <accessibility key="accessibilityConfiguration" identifier="scoreButton" label="scoreButton"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="188" id="JY8-ZG-XX5"/>
-                                    <constraint firstAttribute="width" constant="132" id="Tw0-uF-Dei"/>
-                                    <constraint firstAttribute="height" constant="132" id="VMs-FY-OIe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
-                                <state key="normal" title="0" backgroundImage="white_button_border">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="JY8-ZG-XX5"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="numberButtonTapped:" destination="HbB-f8-TH1" eventType="touchUpInside" id="UEq-hp-8eQ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="yTz-x4-gdl" firstAttribute="centerX" secondItem="lEq-eV-W2W" secondAttribute="centerX" id="3P4-iT-flN"/>
-                            <constraint firstItem="QLs-hj-OnT" firstAttribute="leading" secondItem="lEq-eV-W2W" secondAttribute="leadingMargin" constant="45" id="3fm-hY-nrG"/>
-                            <constraint firstItem="5U3-1t-TQZ" firstAttribute="top" secondItem="yTz-x4-gdl" secondAttribute="bottom" constant="8" id="JJa-QA-C5P"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QLs-hj-OnT" secondAttribute="trailing" constant="46" id="LPj-dS-aVk"/>
-                            <constraint firstItem="2O1-R4-TeC" firstAttribute="top" secondItem="5U3-1t-TQZ" secondAttribute="bottom" constant="8" id="Lec-IN-K0i"/>
-                            <constraint firstItem="5U3-1t-TQZ" firstAttribute="leading" secondItem="2O1-R4-TeC" secondAttribute="trailing" constant="-31" id="bjz-QT-sgJ"/>
-                            <constraint firstItem="QLs-hj-OnT" firstAttribute="top" secondItem="YHv-JU-q3a" secondAttribute="bottom" constant="80" id="kv8-xb-cug"/>
-                            <constraint firstItem="86d-pT-7hd" firstAttribute="top" secondItem="yTz-x4-gdl" secondAttribute="bottom" constant="174" id="pYV-AI-yZ8"/>
-                            <constraint firstItem="yTz-x4-gdl" firstAttribute="leading" secondItem="5U3-1t-TQZ" secondAttribute="trailing" constant="6" id="yo9-4t-Voe"/>
-                            <constraint firstItem="86d-pT-7hd" firstAttribute="top" secondItem="2O1-R4-TeC" secondAttribute="bottom" constant="92" id="zhw-e6-FN6"/>
-                        </constraints>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
-                    <connections>
-                        <outlet property="numberButton" destination="yTz-x4-gdl" id="XNj-gc-4yp"/>
-                        <segue destination="O2H-RY-xPK" kind="show" identifier="showStep2" id="brj-U5-5y4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1bb-Ju-GDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="160" y="1337"/>
-        </scene>
-        <!--Tutorial Two View Controller-->
-        <scene sceneID="rZf-6E-432">
-            <objects>
-                <viewController id="O2H-RY-xPK" customClass="TutorialTwoViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xHF-dg-gfU"/>
-                        <viewControllerLayoutGuide type="bottom" id="Kdi-3k-U9n"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EmG-V2-Zkg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If the next number is a multiple of 3, tap the Fizz button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgf-OZ-ju3">
-                                <rect key="frame" x="79" y="100" width="442" height="72"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxf-Iy-TI9">
-                                <rect key="frame" x="158" y="281" width="284" height="132"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLw-PG-soW">
+                                <rect key="frame" x="158" y="263" width="284" height="284"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOM-Qr-hR8">
-                                        <rect key="frame" x="152" y="0.0" width="132" height="132"/>
-                                        <animations/>
-                                        <state key="normal" image="champagne80" backgroundImage="white_button_border">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="fizzButtonTapped:" destination="O2H-RY-xPK" eventType="touchUpInside" id="V9q-SV-odo"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKy-0S-Erp">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96o-yW-bT6">
                                         <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
                                         <animations/>
                                         <accessibility key="accessibilityConfiguration" identifier="scoreButton" label="scoreButton"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="132" id="HMG-oi-D21"/>
-                                            <constraint firstAttribute="height" constant="132" id="UYr-4e-rJR"/>
-                                            <constraint firstAttribute="width" constant="188" id="day-YY-fWB"/>
+                                            <constraint firstAttribute="width" constant="188" id="BCh-xq-pFD"/>
+                                            <constraint firstAttribute="width" constant="132" id="R5W-PT-FXM"/>
+                                            <constraint firstAttribute="height" constant="132" id="mLc-S9-WL4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                         <state key="normal" title="0" backgroundImage="white_button_border">
@@ -350,269 +252,108 @@
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="day-YY-fWB"/>
+                                                <exclude reference="BCh-xq-pFD"/>
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="numberButtonTapped:" destination="O2H-RY-xPK" eventType="touchUpInside" id="SRr-ct-gpO"/>
+                                            <action selector="numberButtonTapped:" destination="HbB-f8-TH1" eventType="touchUpInside" id="NR0-vP-EmM"/>
                                         </connections>
                                     </button>
-                                </subviews>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstItem="FOM-Qr-hR8" firstAttribute="height" secondItem="NKy-0S-Erp" secondAttribute="height" id="1rr-zo-ike"/>
-                                    <constraint firstItem="FOM-Qr-hR8" firstAttribute="width" secondItem="NKy-0S-Erp" secondAttribute="width" id="447-2u-mfi"/>
-                                    <constraint firstItem="FOM-Qr-hR8" firstAttribute="leading" secondItem="NKy-0S-Erp" secondAttribute="trailing" constant="20" id="79g-lW-8bF"/>
-                                    <constraint firstItem="NKy-0S-Erp" firstAttribute="leading" secondItem="Mxf-Iy-TI9" secondAttribute="leading" id="LkP-70-Kes"/>
-                                    <constraint firstAttribute="bottom" secondItem="FOM-Qr-hR8" secondAttribute="bottom" id="Vxf-0W-xax"/>
-                                    <constraint firstItem="NKy-0S-Erp" firstAttribute="top" secondItem="Mxf-Iy-TI9" secondAttribute="top" id="Z84-0V-AY2"/>
-                                    <constraint firstAttribute="trailing" secondItem="FOM-Qr-hR8" secondAttribute="trailing" id="lxc-NJ-cLn"/>
-                                    <constraint firstItem="FOM-Qr-hR8" firstAttribute="top" secondItem="Mxf-Iy-TI9" secondAttribute="top" id="uCp-LJ-veU"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="kgf-OZ-ju3" firstAttribute="leading" secondItem="EmG-V2-Zkg" secondAttribute="leadingMargin" constant="59" id="0IL-iX-Ism"/>
-                            <constraint firstItem="kgf-OZ-ju3" firstAttribute="centerX" secondItem="EmG-V2-Zkg" secondAttribute="centerX" id="GJ7-KL-ljD"/>
-                            <constraint firstItem="Mxf-Iy-TI9" firstAttribute="top" secondItem="kgf-OZ-ju3" secondAttribute="bottom" constant="109" id="J1i-8g-uqv"/>
-                            <constraint firstItem="kgf-OZ-ju3" firstAttribute="top" secondItem="xHF-dg-gfU" secondAttribute="bottom" constant="80" id="WuF-DV-BmT"/>
-                            <constraint firstItem="Mxf-Iy-TI9" firstAttribute="centerX" secondItem="kgf-OZ-ju3" secondAttribute="centerX" id="ja9-PD-CmG"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="numberButton" destination="NKy-0S-Erp" id="9Dm-Ii-SmB"/>
-                        <segue destination="9jh-ba-n9F" kind="show" identifier="showStep3" id="O86-in-bjr"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zJr-qt-I1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="950" y="1337"/>
-        </scene>
-        <!--Tutorial Three View Controller-->
-        <scene sceneID="ItX-8b-1Eb">
-            <objects>
-                <viewController id="9jh-ba-n9F" customClass="TutorialThreeViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CrJ-qX-Jtw"/>
-                        <viewControllerLayoutGuide type="bottom" id="cha-mG-r0o"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vqr-oL-lls">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If the next number is a multiple of 5, tap the Fizz button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdT-is-QCn">
-                                <rect key="frame" x="79" y="100" width="442" height="72"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuV-eO-cEO">
-                                <rect key="frame" x="158" y="249" width="284" height="284"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABA-xa-zGY">
-                                        <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
-                                        <animations/>
-                                        <accessibility key="accessibilityConfiguration" identifier="scoreButton" label="scoreButton"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="132" id="3I0-wx-zGp"/>
-                                            <constraint firstAttribute="height" constant="132" id="p0F-rG-ESJ"/>
-                                            <constraint firstAttribute="width" constant="188" id="yxd-4Q-xoN"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
-                                        <state key="normal" title="0" backgroundImage="white_button_border">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="yxd-4Q-xoN"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="numberButtonTapped:" destination="9jh-ba-n9F" eventType="touchUpInside" id="cw6-dh-FMZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAu-ci-qQU" userLabel="Fizz Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r13-qm-CdE" userLabel="Fizz Button">
                                         <rect key="frame" x="152" y="0.0" width="132" height="132"/>
                                         <animations/>
                                         <state key="normal" image="champagne80" backgroundImage="white_button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="fizzButtonTapped:" destination="9jh-ba-n9F" eventType="touchUpInside" id="uch-R3-sw2"/>
+                                            <action selector="fizzButtonTapped:" destination="HbB-f8-TH1" eventType="touchUpInside" id="Ue0-nv-u2V"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP2-67-sh8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUA-05-bnM">
                                         <rect key="frame" x="0.0" y="152" width="132" height="132"/>
                                         <animations/>
                                         <state key="normal" image="lightning80" backgroundImage="white_button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="buzzButtonTapped:" destination="9jh-ba-n9F" eventType="touchUpInside" id="jJ5-no-dHm"/>
+                                            <action selector="buzzButtonTapped:" destination="HbB-f8-TH1" eventType="touchUpInside" id="wpA-Xk-grE"/>
                                         </connections>
                                     </button>
-                                </subviews>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstItem="KP2-67-sh8" firstAttribute="height" secondItem="ABA-xa-zGY" secondAttribute="height" id="BAr-B1-3U9"/>
-                                    <constraint firstItem="KP2-67-sh8" firstAttribute="top" secondItem="ABA-xa-zGY" secondAttribute="bottom" constant="20" id="G6X-FI-qjU"/>
-                                    <constraint firstItem="ABA-xa-zGY" firstAttribute="leading" secondItem="MuV-eO-cEO" secondAttribute="leading" id="Gxn-hI-u1W"/>
-                                    <constraint firstItem="yAu-ci-qQU" firstAttribute="leading" secondItem="ABA-xa-zGY" secondAttribute="trailing" constant="20" id="TFT-c6-xp9"/>
-                                    <constraint firstItem="yAu-ci-qQU" firstAttribute="width" secondItem="ABA-xa-zGY" secondAttribute="width" id="VYq-7Q-6Sn"/>
-                                    <constraint firstItem="ABA-xa-zGY" firstAttribute="top" secondItem="MuV-eO-cEO" secondAttribute="top" id="Vxz-kW-sHj"/>
-                                    <constraint firstItem="yAu-ci-qQU" firstAttribute="height" secondItem="ABA-xa-zGY" secondAttribute="height" id="bed-Vc-YQc"/>
-                                    <constraint firstItem="yAu-ci-qQU" firstAttribute="top" secondItem="MuV-eO-cEO" secondAttribute="top" id="fDA-Dy-BTC"/>
-                                    <constraint firstAttribute="bottom" secondItem="KP2-67-sh8" secondAttribute="bottom" id="mfK-oP-uPA"/>
-                                    <constraint firstItem="KP2-67-sh8" firstAttribute="leading" secondItem="MuV-eO-cEO" secondAttribute="leading" id="pBF-Ew-Gjm"/>
-                                    <constraint firstItem="KP2-67-sh8" firstAttribute="width" secondItem="ABA-xa-zGY" secondAttribute="width" id="roK-nh-Lcx"/>
-                                    <constraint firstAttribute="trailing" secondItem="yAu-ci-qQU" secondAttribute="trailing" id="so0-aj-Cm4"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="qdT-is-QCn" firstAttribute="top" secondItem="CrJ-qX-Jtw" secondAttribute="bottom" constant="80" id="Gxx-5d-3u9"/>
-                            <constraint firstItem="qdT-is-QCn" firstAttribute="centerX" secondItem="vqr-oL-lls" secondAttribute="centerX" id="Jig-nX-wc7"/>
-                            <constraint firstItem="MuV-eO-cEO" firstAttribute="top" secondItem="qdT-is-QCn" secondAttribute="bottom" constant="77" id="d0R-cT-JiM"/>
-                            <constraint firstItem="qdT-is-QCn" firstAttribute="leading" secondItem="vqr-oL-lls" secondAttribute="leadingMargin" constant="59" id="fOx-qp-toc"/>
-                            <constraint firstItem="MuV-eO-cEO" firstAttribute="centerX" secondItem="vqr-oL-lls" secondAttribute="centerX" id="tXW-0V-gKP"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="numberButton" destination="ABA-xa-zGY" id="8dq-8K-eeJ"/>
-                        <segue destination="OiH-b6-YhE" kind="show" identifier="showStep4" id="HcQ-qM-XTJ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nha-NO-EdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1750" y="1337"/>
-        </scene>
-        <!--Tutorial Four View Controller-->
-        <scene sceneID="U5Z-DY-kQ0">
-            <objects>
-                <viewController id="OiH-b6-YhE" customClass="TutorialFourViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ksi-o2-JH3"/>
-                        <viewControllerLayoutGuide type="bottom" id="Uhq-Ja-tqc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kuY-GX-Vqk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finally, if the next number is a a multiple of 3 AND 5, tap the FizzBuzz button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpB-rT-EoP">
-                                <rect key="frame" x="79" y="80" width="442" height="108"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAK-uK-Ydn">
-                                <rect key="frame" x="158" y="238" width="284" height="284"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azG-pK-owT">
-                                        <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
-                                        <animations/>
-                                        <accessibility key="accessibilityConfiguration" identifier="scoreButton" label="scoreButton"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="132" id="Khl-vq-wPF"/>
-                                            <constraint firstAttribute="width" constant="188" id="Tm0-29-0My"/>
-                                            <constraint firstAttribute="height" constant="132" id="VjW-rJ-9N0"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
-                                        <state key="normal" title="0" backgroundImage="white_button_border">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Tm0-29-0My"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="numberButtonTapped:" destination="OiH-b6-YhE" eventType="touchUpInside" id="9qz-LV-rYj"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBm-uL-UtW" userLabel="Fizz Button">
-                                        <rect key="frame" x="152" y="0.0" width="132" height="132"/>
-                                        <animations/>
-                                        <state key="normal" image="champagne80" backgroundImage="white_button_border">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="fizzButtonTapped:" destination="OiH-b6-YhE" eventType="touchUpInside" id="CW9-h6-zHU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATQ-jQ-7lL">
-                                        <rect key="frame" x="0.0" y="152" width="132" height="132"/>
-                                        <animations/>
-                                        <state key="normal" image="lightning80" backgroundImage="white_button_border">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buzzButtonTapped:" destination="OiH-b6-YhE" eventType="touchUpInside" id="7jW-G8-8nv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIZ-NA-fMv" userLabel="Fizz Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COk-z8-6EN" userLabel="Fizz Button">
                                         <rect key="frame" x="152" y="153" width="132" height="132"/>
                                         <animations/>
                                         <state key="normal" image="space80" backgroundImage="white_button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="fizzButtonTapped:" destination="OiH-b6-YhE" eventType="touchUpInside" id="tUt-oo-XaI"/>
-                                            <action selector="fizzBuzzButtonTapped:" destination="OiH-b6-YhE" eventType="touchUpInside" id="5BU-ia-iPg"/>
+                                            <action selector="ButtonTapped:" destination="HbB-f8-TH1" eventType="touchUpInside" id="dkx-iJ-IFb"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="qIZ-NA-fMv" secondAttribute="bottom" constant="-1" id="02u-8i-S6p"/>
-                                    <constraint firstAttribute="trailing" secondItem="hBm-uL-UtW" secondAttribute="trailing" id="1vo-Lf-UA3"/>
-                                    <constraint firstItem="ATQ-jQ-7lL" firstAttribute="width" secondItem="azG-pK-owT" secondAttribute="width" id="3Zb-Ki-mvN"/>
-                                    <constraint firstItem="qIZ-NA-fMv" firstAttribute="height" secondItem="azG-pK-owT" secondAttribute="height" id="4GF-O3-g54"/>
-                                    <constraint firstItem="azG-pK-owT" firstAttribute="leading" secondItem="eAK-uK-Ydn" secondAttribute="leading" id="9dF-QD-noB"/>
-                                    <constraint firstItem="azG-pK-owT" firstAttribute="top" secondItem="eAK-uK-Ydn" secondAttribute="top" id="Mke-qJ-5zx"/>
-                                    <constraint firstAttribute="bottom" secondItem="ATQ-jQ-7lL" secondAttribute="bottom" id="NI0-Lb-HQz"/>
-                                    <constraint firstItem="ATQ-jQ-7lL" firstAttribute="height" secondItem="azG-pK-owT" secondAttribute="height" id="PQN-ey-7n4"/>
-                                    <constraint firstItem="hBm-uL-UtW" firstAttribute="height" secondItem="azG-pK-owT" secondAttribute="height" id="PWJ-Cm-WBV"/>
-                                    <constraint firstItem="ATQ-jQ-7lL" firstAttribute="top" secondItem="azG-pK-owT" secondAttribute="bottom" constant="20" id="Rh8-YH-cUh"/>
-                                    <constraint firstItem="qIZ-NA-fMv" firstAttribute="top" secondItem="hBm-uL-UtW" secondAttribute="bottom" constant="21" id="Sbr-Ih-0GP"/>
-                                    <constraint firstAttribute="trailing" secondItem="qIZ-NA-fMv" secondAttribute="trailing" id="aOk-fz-zIh"/>
-                                    <constraint firstItem="ATQ-jQ-7lL" firstAttribute="leading" secondItem="eAK-uK-Ydn" secondAttribute="leading" id="b24-Q4-FRS"/>
-                                    <constraint firstItem="hBm-uL-UtW" firstAttribute="width" secondItem="azG-pK-owT" secondAttribute="width" id="gvF-dL-HRI"/>
-                                    <constraint firstItem="hBm-uL-UtW" firstAttribute="top" secondItem="eAK-uK-Ydn" secondAttribute="top" id="i3J-WY-ERK"/>
-                                    <constraint firstItem="qIZ-NA-fMv" firstAttribute="width" secondItem="azG-pK-owT" secondAttribute="width" id="rLx-KS-quQ"/>
-                                    <constraint firstItem="hBm-uL-UtW" firstAttribute="leading" secondItem="azG-pK-owT" secondAttribute="trailing" constant="20" id="wH1-Cm-Rgf"/>
+                                    <constraint firstItem="r13-qm-CdE" firstAttribute="leading" secondItem="96o-yW-bT6" secondAttribute="trailing" constant="20" id="7au-CH-4x7"/>
+                                    <constraint firstItem="r13-qm-CdE" firstAttribute="width" secondItem="96o-yW-bT6" secondAttribute="width" id="A4d-qW-1t5"/>
+                                    <constraint firstItem="96o-yW-bT6" firstAttribute="leading" secondItem="XLw-PG-soW" secondAttribute="leading" id="Aoa-Ns-JFE"/>
+                                    <constraint firstItem="r13-qm-CdE" firstAttribute="top" secondItem="XLw-PG-soW" secondAttribute="top" id="EW1-Ch-nnE"/>
+                                    <constraint firstAttribute="bottom" secondItem="COk-z8-6EN" secondAttribute="bottom" constant="-1" id="H08-7F-cMz"/>
+                                    <constraint firstAttribute="trailing" secondItem="COk-z8-6EN" secondAttribute="trailing" id="HxD-8H-NNY"/>
+                                    <constraint firstAttribute="trailing" secondItem="r13-qm-CdE" secondAttribute="trailing" id="Y7T-NZ-6ZT"/>
+                                    <constraint firstItem="COk-z8-6EN" firstAttribute="width" secondItem="96o-yW-bT6" secondAttribute="width" id="ZxY-eK-d20"/>
+                                    <constraint firstItem="COk-z8-6EN" firstAttribute="height" secondItem="96o-yW-bT6" secondAttribute="height" id="iaO-3S-cHU"/>
+                                    <constraint firstItem="96o-yW-bT6" firstAttribute="top" secondItem="XLw-PG-soW" secondAttribute="top" id="l8i-Mg-qlC"/>
+                                    <constraint firstItem="COk-z8-6EN" firstAttribute="top" secondItem="r13-qm-CdE" secondAttribute="bottom" constant="21" id="nc8-Lx-agj"/>
+                                    <constraint firstItem="r13-qm-CdE" firstAttribute="height" secondItem="96o-yW-bT6" secondAttribute="height" id="q2q-Iy-RN3"/>
+                                    <constraint firstItem="rUA-05-bnM" firstAttribute="leading" secondItem="XLw-PG-soW" secondAttribute="leading" id="rWr-5r-d1g"/>
+                                    <constraint firstItem="rUA-05-bnM" firstAttribute="width" secondItem="96o-yW-bT6" secondAttribute="width" id="rec-wM-D9Y"/>
+                                    <constraint firstItem="rUA-05-bnM" firstAttribute="top" secondItem="96o-yW-bT6" secondAttribute="bottom" constant="20" id="s0c-zQ-Rfk"/>
+                                    <constraint firstAttribute="bottom" secondItem="rUA-05-bnM" secondAttribute="bottom" id="sko-S4-HrY"/>
+                                    <constraint firstItem="rUA-05-bnM" firstAttribute="height" secondItem="96o-yW-bT6" secondAttribute="height" id="slK-O9-PS1"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e46-HP-HCs">
+                                <rect key="frame" x="550" y="28" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EcD-K1-33N" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome2:" id="gUz-jj-zqQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="eAK-uK-Ydn" firstAttribute="top" secondItem="rpB-rT-EoP" secondAttribute="bottom" constant="50" id="7eK-NJ-vFF"/>
-                            <constraint firstItem="rpB-rT-EoP" firstAttribute="top" secondItem="ksi-o2-JH3" secondAttribute="bottom" constant="60" id="Ahv-Ne-gwj"/>
-                            <constraint firstItem="rpB-rT-EoP" firstAttribute="centerX" secondItem="kuY-GX-Vqk" secondAttribute="centerX" id="feb-DV-Z3q"/>
-                            <constraint firstItem="eAK-uK-Ydn" firstAttribute="centerX" secondItem="kuY-GX-Vqk" secondAttribute="centerX" id="hEC-YX-fn4"/>
-                            <constraint firstItem="rpB-rT-EoP" firstAttribute="leading" secondItem="kuY-GX-Vqk" secondAttribute="leadingMargin" constant="59" id="mME-gc-F6g"/>
+                            <constraint firstItem="QLs-hj-OnT" firstAttribute="leading" secondItem="lEq-eV-W2W" secondAttribute="leadingMargin" constant="45" id="3fm-hY-nrG"/>
+                            <constraint firstItem="XLw-PG-soW" firstAttribute="centerX" secondItem="lEq-eV-W2W" secondAttribute="centerX" id="4CX-NV-PVn"/>
+                            <constraint firstItem="e46-HP-HCs" firstAttribute="top" secondItem="YHv-JU-q3a" secondAttribute="bottom" constant="8" id="IOY-Pj-XgB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QLs-hj-OnT" secondAttribute="trailing" constant="46" id="LPj-dS-aVk"/>
+                            <constraint firstItem="86d-pT-7hd" firstAttribute="top" secondItem="XLw-PG-soW" secondAttribute="bottom" constant="53" id="Nu0-DH-fgr"/>
+                            <constraint firstItem="QLs-hj-OnT" firstAttribute="top" secondItem="YHv-JU-q3a" secondAttribute="bottom" constant="80" id="kv8-xb-cug"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e46-HP-HCs" secondAttribute="trailing" id="olg-DC-Zse"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
-                        <outlet property="numberButton" destination="azG-pK-owT" id="bC6-tI-l8h"/>
+                        <outlet property="buzzButton" destination="rUA-05-bnM" id="kvg-wJ-GvV"/>
+                        <outlet property="fizzButton" destination="r13-qm-CdE" id="5pm-P5-MzL"/>
+                        <outlet property="fizzBuzzButton" destination="COk-z8-6EN" id="RIt-dO-L8D"/>
+                        <outlet property="instructionLabel" destination="QLs-hj-OnT" id="6s4-xw-oyr"/>
+                        <outlet property="numberButton" destination="96o-yW-bT6" id="VUm-Nm-HIA"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vkm-pQ-cRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bb-Ju-GDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EcD-K1-33N" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2494" y="1337"/>
+            <point key="canvasLocation" x="160" y="1337"/>
         </scene>
     </scenes>
     <resources>
         <image name="champagne80" width="80" height="82"/>
         <image name="lightning80" width="47" height="80"/>
         <image name="space80" width="75" height="80"/>
-        <image name="white_arrow" width="19" height="31"/>
         <image name="white_button_border" width="215" height="210"/>
     </resources>
 </document>

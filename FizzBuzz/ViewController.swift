@@ -46,10 +46,6 @@ class ViewController: UIViewController {
         fbButtons = [fizzButton, buzzButton, fizzBuzzButton]
         settingsViews = [highScoreLabel, hsLabel, multiplesButton, settingsButton, playButton]
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     // MARK: Input Actions
     
@@ -173,6 +169,13 @@ class ViewController: UIViewController {
     func stopTimer() {
         gameTimer?.invalidate()
     }
+    
+    // MARK: Segue
+    
+    @IBAction func unwindToHome2(sender: UIStoryboardSegue) {
+        print("Unwind damnit")
+    }
+    
 
 }
 
