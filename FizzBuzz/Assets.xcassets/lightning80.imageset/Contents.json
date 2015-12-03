@@ -7,10 +7,12 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "lightning100.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "lightning200.png",
       "scale" : "3x"
     }
   ],
